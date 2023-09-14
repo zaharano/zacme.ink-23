@@ -8,7 +8,7 @@ Live at http://www.zacme.ink
 
 ## Developing
 
-Install with `npm install` (or `pnpm install` or `yarn`)
+Install with `npm install`
 
 This site uses some Club Greensock premium features so install and build will require a valid key provided via .npmrc (local or global), or via another method of environment variable.
 
@@ -23,12 +23,12 @@ npm run dev -- --open
 
 ## Building
 
-To build you can
+This repo is set up in Vercel to auto-deploy from main to production. 
+
+To manually build you can
 
 ```bash
 npm run build
 ```
 
 You can preview the production build with `npm run preview`.
-
-But this is set up with the netlify-adapter and is set to auto-deploy from the `main` branch on Github.
