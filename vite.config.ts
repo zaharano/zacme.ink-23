@@ -10,6 +10,3 @@ export default defineConfig({
 		noExternal: ['gsap', '@gsap/shockingly', 'sharp']
 	}
 });
-
-
-sharp -i ~/static/assets -o ~/static/assets/test -f webp -q 75
