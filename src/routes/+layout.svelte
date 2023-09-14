@@ -1,7 +1,18 @@
 <script>
 	import Header from './Header.svelte';
+	import Footer from '../lib/components/Footer.svelte';
 	import './styles.css';
 </script>
+
+<svelte:head>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@600&family=Vollkorn:ital,wght@0,400;0,600;1,400&display=swap"
+		rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="https://use.typekit.net/plt5xkx.css" />
+	<title>Zach's Portfolio</title>
+	<meta name="description" content="Zach brags about doing things" />
+</svelte:head>
 
 <div class="app">
 	<Header />
@@ -10,44 +21,22 @@
 		<slot />
 	</main>
 
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
+	<Footer />
 </div>
 
 <style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
 	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
+		text-align: center;
+		margin: auto;
 	}
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
+	:global(section) {
+		width: var(--pagewidth);
+		max-width: 1400px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 1em;
+		padding-right: 1em;
+		margin-top: 13vh;
 	}
 </style>

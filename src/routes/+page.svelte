@@ -1,59 +1,25 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import Hero from '../lib/sections/Hero.svelte';
+	import FigSection from '../lib/sections/FigSection.svelte';
+	import ProjectSection from '../lib/sections/ProjectSection.svelte';
+	import AboutSection from '../lib/sections/AboutSection.svelte';
+	import ContactSection from '../lib/sections/ContactSection.svelte';
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@600&family=Vollkorn:ital,wght@0,400;0,600;1,400&display=swap"
+		rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="https://use.typekit.net/plt5xkx.css" />
+	<title>Zach's Portfolio</title>
+	<meta name="description" content="Zach brags about doing things" />
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
+<main id="main">
+	<Hero />
+	<FigSection />
+	<ProjectSection />
+	<AboutSection />
+	<ContactSection />
+</main>
