@@ -1,6 +1,6 @@
 # ZHRN Portfolio 2023
 
-Ported my portfolio to SvelteKit (for nor real reason other than wanting to use it, this site isn't even a good use case for it!)
+Ported my portfolio to SvelteKit (for nor real reason other than wanting to use it, this site isn't even a good use case for it!) Also doing random refactors because there's always room for improvement (and better Typescript)
 
 Lots of fun GSAP bits.
 
