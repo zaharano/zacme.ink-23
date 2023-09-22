@@ -646,7 +646,8 @@
 	}
 
 	@media (max-width: 555px) {
-		#bitz {
+		#bitz,
+		#moon {
 			display: none;
 		}
 
