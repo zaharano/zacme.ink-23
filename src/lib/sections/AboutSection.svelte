@@ -7,7 +7,11 @@
 	<IntersectionObserver once={true} let:intersecting top={500}>
 		<SectionHead id="about" text="About Me" />
 		<div id="biorow">
-			<div id="imgwrapper" />
+			<div id="imgwrapper">
+				{#if intersecting}
+					<img src="./assets/me@2x.jpg" alt="Me" />
+				{/if}
+			</div>
 			<div class="bio">
 				<p>
 					I'm from Oakland, CA, currently living in Brooklyn, NY. I have a background in editorial
@@ -55,11 +59,15 @@
 		overflow: hidden;
 		box-sizing: border-box;
 		margin-right: 3rem;
-		background-image: url('../assets/me@2x.jpg');
-		background-size: cover;
-		background-position: center;
 		min-height: 500px;
 		align-self: stretch;
+	}
+
+	#imgwrapper > img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		aspect-ratio: 3/2;
 	}
 
 	@media (max-width: 1000px) {
