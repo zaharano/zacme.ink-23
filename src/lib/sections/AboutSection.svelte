@@ -11,14 +11,15 @@
 			<div class="bio">
 				<p>
 					I'm from Oakland, CA, currently living in Brooklyn, NY. I have a background in editorial
-					and non-profit design, as well as a fair amount of digital marketing type stuff.
+					and non-profit design, as well as a fair amount of digital marketing type stuff. These
+					days I'm freelancing on interactive design and development projects, as well as some print
+					and branding work.
 				</p>
 				<p>
-					I have rediscovered my passion for technology and code, pursuits I relished in school but
-					drifted away from afterwards. Nowadays, I spend my time freelancing and playing with
-					creative coding to find weird ways to bring my ideas to life.
+					I love computers, technology, and code. I spend free time playing with creative coding to
+					find weird ways to bring my ideas to life.
 				</p>
-				<p>I enjoy cooking, soccer, going to museums, and trashy genre fiction.</p>
+				<p>I also enjoy cooking, soccer, going to museums, and trashy genre fiction.</p>
 			</div>
 		</div>
 	</IntersectionObserver>

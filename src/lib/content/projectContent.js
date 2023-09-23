@@ -107,28 +107,28 @@ export default [
 			href: 'https://www.behance.net/gallery/110980207/PEX-Card-Comps-and-Mockups'
 		}
 	},
-	{
-		src: './assets/' + 'gal-PEXvids.png',
-		alt: 'A thumbnail from a PEX video explainer',
-		tags: ['animation', 'video', 'explainer'],
-		title: 'Making PEX more dynamic',
-		body: 'Finding every way I can to bring motion to the brand',
-		button: {
-			txt: 'check it out',
-			href: 'https://www.behance.net/gallery/110976955/Adding-dynamism-to-the-PEX-Brand'
-		}
-	},
-	{
-		src: './assets/' + 'gal-Ghosh.png',
-		alt: 'A thumbnail of the Powering Prosperity website',
-		tags: ['webdesign', 'webflow'],
-		title: 'Powering Powering Prosperity',
-		body: 'Building a website for a new book',
-		button: {
-			txt: 'check it out',
-			href: 'https://www.behance.net/gallery/111400489/Tiger-Hill-Capital-Websites'
-		}
-	},
+	// {
+	// 	src: './assets/' + 'gal-PEXvids.png',
+	// 	alt: 'A thumbnail from a PEX video explainer',
+	// 	tags: ['animation', 'video', 'explainer'],
+	// 	title: 'Making PEX more dynamic',
+	// 	body: 'Finding every way I can to bring motion to the brand',
+	// 	button: {
+	// 		txt: 'check it out',
+	// 		href: 'https://www.behance.net/gallery/110976955/Adding-dynamism-to-the-PEX-Brand'
+	// 	}
+	// },
+	// {
+	// 	src: './assets/' + 'gal-Ghosh.png',
+	// 	alt: 'A thumbnail of the Powering Prosperity website',
+	// 	tags: ['webdesign', 'webflow'],
+	// 	title: 'Powering Powering Prosperity',
+	// 	body: 'Building a website for a new book',
+	// 	button: {
+	// 		txt: 'check it out',
+	// 		href: 'https://www.behance.net/gallery/111400489/Tiger-Hill-Capital-Websites'
+	// 	}
+	// },
 	{
 		src: './assets/' + 'gal-Ghosh2.png',
 		alt: 'A thumbnail of the Tiger Hill Capital website',
