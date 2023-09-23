@@ -6,8 +6,10 @@
 	import Menu from '../lib/components/Menu.svelte';
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				scrub: true,
