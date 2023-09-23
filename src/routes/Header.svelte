@@ -6,8 +6,10 @@
 	import Menu from '../lib/components/Menu.svelte';
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				scrub: true,
@@ -26,7 +28,7 @@
 		<button
 			aria-label="”Home”"
 			on:click={() => {
-				document.getElementById('main').scrollIntoView({ behavior: 'smooth' });
+				document.getElementById('main')?.scrollIntoView({ behavior: 'smooth' });
 			}}
 		>
 			<svg class="header-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111.75 143.68">
