@@ -9,6 +9,22 @@
 
 export default [
 	{
+		src: './assets/' + 'gal-RACsite.png',
+		alt: 'A thumbnail of the Rent-A-Christmas website',
+		tags: ['ts', 'react', 'webdev'],
+		title: 'A New Rent-A-Christmas Website',
+		body: 'A robust website with ecommerce, large product catalog, blog, and more',
+		button: {
+			txt: 'case study',
+			href: 'https://www.behance.net/gallery/179954055/Rent-A-Christmas-Website'
+		},
+		secondButton: {
+			icon: 'www',
+			text: 'visit the site',
+			href: 'https://www.rent-a-christmas.com'
+		}
+	},
+	{
 		src: './assets/' + 'gal-Megacorp.png',
 		alt: 'A thumbnail of the Megacorp website',
 		tags: ['js', 'svelte', 'gamedesign'],
