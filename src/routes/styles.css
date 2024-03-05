@@ -136,6 +136,7 @@ button {
 	border: none;
 	background: none;
 	font-family: inherit;
+	font-size: inherit;
 }
 
 /* if we must focus, style it */

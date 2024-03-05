@@ -1,8 +1,4 @@
 <script>
-	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
-
 	import Menu from '../lib/components/Menu.svelte';
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';

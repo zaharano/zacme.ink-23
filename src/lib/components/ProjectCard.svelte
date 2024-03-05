@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Button from './Button.svelte';
 	import ClickOutside from './ClickOutside.svelte';
 	import IntersectionObserver from './IntersectionObserver.svelte';
@@ -6,7 +6,7 @@
 	export let src = './assets/Enterprise_HD.jpg';
 	export let alt = 'The Starship Enterprise';
 	export let tags = ['these', 'are', 'voyages'];
-	export let title;
+	export let title = 'Space, the final frontier';
 	export let body =
 		'Communication is not possible. The shuttle has no power. Using the gravitational pull of a star to slingshot back in time?';
 	export let button = {
@@ -30,7 +30,7 @@
 <IntersectionObserver once={true} let:intersecting>
 	<!-- ClickOutside for mobile (pressing outside tile rehides details) -->
 	<ClickOutside on:clickoutside={hideOn}>
-		<article
+		<button
 			tabindex="0"
 			on:mouseover={hideOff}
 			on:mouseleave={hideOn}
@@ -64,12 +64,12 @@
 					<Button {...button} />
 				</div>
 			</div>
-		</article>
+		</button>
 	</ClickOutside>
 </IntersectionObserver>
 
 <style>
-	article {
+	button {
 		position: relative;
 		box-sizing: border-box;
 		border: var(--border);
@@ -80,15 +80,11 @@
 		text-align: left;
 		box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
 		opacity: 0;
-		transform: translateY(100px);
-		will-change: opacity, transform;
-		transition: opacity 0.8s, transform 0.8s;
-		transition-delay: 0.2s;
-		transition-timing-function: ease-out;
+		will-change: opacity;
 	}
 
 	h2 {
-		font-size: 1.6em;
+		font-size: 1.4em;
 		margin-bottom: 0rem;
 	}
 
@@ -104,7 +100,6 @@
 
 	.imgLoaded {
 		opacity: 1;
-		transform: translateY(0px);
 	}
 
 	.background {
