@@ -81,26 +81,16 @@ export default [
 	},
 	{
 		src: './assets/gal-RACvalues.png',
-		alt: 'A thumbnail of the RAC values illustrations',
+		alt: 'A thumbnail of the RAC illustrations',
 		tags: ['art direction', 'illustration'],
-		title: 'Rent-A-Christmas Elves',
-		body: 'A collection of illustrations depicting company values and benefits. Featuring lots of elves.',
+		title: 'Rent-A-Christmas Illustrations',
+		body: 'A few collections of illustrations. Featuring lots of elves.',
 		button: {
 			txt: 'elves, you say?',
 			href: 'https://www.behance.net/gallery/109998313/Rent-A-Christmas-Website-Illustrations'
 		}
 	},
-	{
-		src: './assets/gal-RACbuses.png',
-		alt: 'A thumbnail of the RAC business illustrations',
-		tags: ['illustration', 'art direction'],
-		title: 'Rent-A-Christmas Businesses',
-		body: 'A collection of illustrations showing types of businesses.',
-		button: {
-			txt: 'check them out',
-			href: 'https://www.behance.net/gallery/109991585/Rent-A-Christmas-Business-Illustrations'
-		}
-	},
+
 	{
 		src: './assets/' + 'gal-PEXcard.png',
 		alt: 'A thumbnail of many PEX card design options',
