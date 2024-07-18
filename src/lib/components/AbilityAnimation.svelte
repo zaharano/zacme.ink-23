@@ -93,7 +93,7 @@
 					delay: 0.1,
 					duration: 1,
 					ease: 'power1.inOut',
-					x: '-=50vw',
+					x: '-=110%',
 					autoAlpha: 0
 				})
 				// .set(ele, {
