@@ -87,13 +87,13 @@
 		// last one is just a delay before the abilities start flying
 
 		let abils = gsap.utils.toArray('#ability-feed > li').reverse();
-		abils.forEach((ele: HTMLLIElement) => {
+		abils.forEach((ele) => {
 			abilTL
 				.to(ele, {
 					delay: 0.1,
 					duration: 1,
 					ease: 'power1.inOut',
-					x: '-=50vw',
+					x: '-=110%',
 					autoAlpha: 0
 				})
 				// .set(ele, {

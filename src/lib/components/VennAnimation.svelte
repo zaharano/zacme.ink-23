@@ -1,10 +1,12 @@
-<script>
+<script lang='ts'>
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import { DrawSVGPlugin } from 'gsap/all';
 	import { GSDevTools } from 'gsap/GSDevTools';
 	import { Physics2DPlugin } from 'gsap/Physics2DPlugin';
+
+	let replay: HTMLButtonElement;
 
 	onMount(() => {
 		function addFig() {
@@ -19,6 +21,10 @@
 		const tl = gsap.timeline({
 			onComplete: addFig
 		});
+
+		replay.onclick = () => {
+			tl.restart();
+		};
 
 		gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, GSDevTools, Physics2DPlugin);
 
@@ -1073,7 +1079,7 @@
 		<span>
 			<span class="sc">fig.2:</span> finding <span class="sc">magic</span> in the middle
 		</span>
-		<button class="replay" aria-label="Replay" on:click={() => tl.restart()} />
+		<button class="replay" aria-label="Replay" bind:this={replay} />
 	</figcaption>
 </figure>
 
