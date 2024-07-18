@@ -28,7 +28,14 @@
 			codeTL = gsap.timeline({ onComplete: resetTL, paused: true });
 
 		//speech bubble TL
-		const speechTL = gsap.timeline({ delay: 1 });
+		const speechTL = gsap.timeline({ onComplete: () => {
+			desTL.play().then(() => {
+				animTL.play().then(() => {
+					codeTL.play();
+				});
+			});
+		},
+		delay: 1 });
 
 		const delay = 0.02,
 			duration = 0.01,
@@ -171,11 +178,11 @@
 					ease: 'Elastic.easeOut'
 				},
 				'>0'
-			);
+			)
 
 		// infinite random yoyo verticle moves or blinkies for sparkles
-		function randomMove(ele) {
-			if (Math.random() > 0.3) {
+		function randomMove(ele : HTMLElement) {
+			if (Math.random() > 0.2) {
 				gsap.to(ele, {
 					y: `+=${gsap.utils.random(-20, 20)}`,
 					duration: gsap.utils.random(2, 4),
@@ -188,7 +195,7 @@
 				});
 			} else {
 				gsap.to(ele, {
-					opacity: 0,
+					// opacity: 0,
 					scaleY: 0,
 					duration: 0.1,
 					ease: 'ease',
@@ -209,8 +216,9 @@
 		};
 
 		// track nudge count by dimension
-		const nudge = function (dim) {
+		const nudge = function (dim: 'x' | 'y') {
 			nudges[dim]++;
+			return '+=' + nudges[dim] * nudgeAmount;
 		};
 
 		desTL
@@ -414,7 +422,9 @@
 				autoAlpha: 0
 			})
 			.timeScale(1.5);
+
 	});
+
 </script>
 
 <section>
