@@ -12,7 +12,7 @@
 		gsap.registerPlugin(TextPlugin, DrawSVGPlugin);
 
 		//reset tl function
-		const resetTL = function () {
+		const resetTL = function (this: gsap.core.Timeline) {
 			this.restart().pause();
 		};
 
@@ -28,14 +28,16 @@
 			codeTL = gsap.timeline({ onComplete: resetTL, paused: true });
 
 		//speech bubble TL
-		const speechTL = gsap.timeline({ onComplete: () => {
-			desTL.play().then(() => {
-				animTL.play().then(() => {
-					codeTL.play();
+		const speechTL = gsap.timeline({
+			onComplete: () => {
+				desTL.play().then(() => {
+					animTL.play().then(() => {
+						codeTL.play();
+					});
 				});
-			});
-		},
-		delay: 1 });
+			},
+			delay: 1
+		});
 
 		const delay = 0.02,
 			duration = 0.01,
@@ -144,7 +146,7 @@
 					ease: 'power2.out',
 					onComplete: () => {
 						gsap.utils.toArray('.sparkle').forEach((ele) => {
-							randomMove(ele);
+							randomMove(ele as HTMLElement);
 						});
 					}
 				},
@@ -178,10 +180,10 @@
 					ease: 'Elastic.easeOut'
 				},
 				'>0'
-			)
+			);
 
 		// infinite random yoyo verticle moves or blinkies for sparkles
-		function randomMove(ele : HTMLElement) {
+		function randomMove(ele: HTMLElement) {
 			if (Math.random() > 0.2) {
 				gsap.to(ele, {
 					y: `+=${gsap.utils.random(-20, 20)}`,
@@ -422,9 +424,7 @@
 				autoAlpha: 0
 			})
 			.timeScale(1.5);
-
 	});
-
 </script>
 
 <section>

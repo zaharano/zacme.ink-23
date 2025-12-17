@@ -1,17 +1,17 @@
-<script>
+<script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 
-	export let exclude = [];
+	export let exclude: HTMLElement[] = [];
 
-	let child;
+	let child: HTMLElement;
 
 	const dispatch = createEventDispatcher();
 
-	function isExcluded(target) {
-		var parent = target;
+	function isExcluded(target: Node | null) {
+		let parent = target;
 
 		while (parent) {
-			if (exclude.indexOf(parent) >= 0 || parent === child) {
+			if (exclude.indexOf(parent as HTMLElement) >= 0 || parent === child) {
 				return true;
 			}
 
@@ -21,8 +21,8 @@
 		return false;
 	}
 
-	function onClickOutside(event) {
-		if (!isExcluded(event.target)) {
+	function onClickOutside(event: MouseEvent) {
+		if (!isExcluded(event.target as Node)) {
 			dispatch('clickoutside');
 		}
 	}

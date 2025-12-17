@@ -29,10 +29,10 @@
 		}
 	];
 
-	function menuAct(t) {
+	function menuAct(t: string) {
 		handleClick();
 		let e = document.getElementById(t);
-		e.scrollIntoView({
+		e?.scrollIntoView({
 			block: 'start',
 			behavior: 'smooth',
 			inline: 'start'

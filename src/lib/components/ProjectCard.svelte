@@ -13,6 +13,17 @@
 		txt: 'Make it so',
 		href: 'http://www.startrek.com'
 	};
+	export let slug = '';
+	export let hasOnsitePage = false;
+	export let secondButton: { txt: string; href: string } | undefined = undefined;
+
+	// If this project has an on-site page, override the primary button
+	const primaryButton = hasOnsitePage
+		? {
+				txt: 'view project',
+				href: `/projects/${slug}`
+			}
+		: button;
 
 	let imgLoaded = false;
 
@@ -61,7 +72,10 @@
 					<p class="body">{body}</p>
 				</div>
 				<div class="bottom">
-					<Button {...button} />
+					<Button {...primaryButton} />
+					{#if secondButton}
+						<Button {...secondButton} />
+					{/if}
 				</div>
 			</div>
 		</button>
@@ -183,10 +197,6 @@
 	@media (max-width: 480px) {
 		h2 {
 			font-size: 1.4em;
-		}
-
-		article {
-			margin-bottom: 1.5em;
 		}
 	}
 </style>

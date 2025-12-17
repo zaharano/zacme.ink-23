@@ -9,6 +9,8 @@
 
 export default [
 	{
+		slug: 'racsite',
+		hasOnsitePage: true,
 		src: './assets/' + 'gal-RACsite.png',
 		alt: 'A thumbnail of the Rent-A-Christmas website',
 		tags: ['ts', 'react', 'webdev'],
@@ -36,6 +38,8 @@ export default [
 		}
 	},
 	{
+		slug: 'pexdigital',
+		hasOnsitePage: true,
 		src: './assets/' + 'gal-PEXOnboarding.png',
 		alt: 'A thumbnail showing the stepper component of PEX onboarding',
 		tags: ['emails', 'documentation', 'branding'],
@@ -58,6 +62,8 @@ export default [
 		}
 	},
 	{
+		slug: 'pexvis',
+		hasOnsitePage: true,
 		src: './assets/' + 'gal-PEXSpaces.jpg',
 		alt: 'A thumbnail of my work designing PEX in the physical world',
 		tags: ['office', 'conventions'],
@@ -69,6 +75,8 @@ export default [
 		}
 	},
 	{
+		slug: 'racstyle',
+		hasOnsitePage: true,
 		src: './assets/' + 'gal-RACStyleGuide.png',
 		alt: 'A thumbnail of the RAC Style Guide',
 		tags: ['branding', 'illustration', 'joy'],
@@ -147,6 +155,8 @@ export default [
 		}
 	},
 	{
+		slug: 'lsf',
+		hasOnsitePage: true,
 		src: './assets/gal-LSFmag.png',
 		alt: 'A thumbnail showing off LSF magazine pages',
 		tags: ['print', 'editorial design', 'data viz'],

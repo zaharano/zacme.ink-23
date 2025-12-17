@@ -1,4 +1,10 @@
+/**
+ * @param {() => void} intervalFunction
+ * @param {number} minDelay
+ * @param {number} maxDelay
+ */
 export const setRandomInterval = (intervalFunction, minDelay, maxDelay) => {
+	/** @type {ReturnType<typeof setTimeout>} */
 	let timeout;
 
 	const runInterval = () => {

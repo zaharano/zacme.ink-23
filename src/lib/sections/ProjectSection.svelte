@@ -35,7 +35,7 @@
 <section>
 	<SectionHead id="projects" text="Projects" />
 	<div class="gallery">
-		{#each projects as project, i}
+		{#each projects as project}
 			<ProjectCard {...project} />
 		{/each}
 	</div>

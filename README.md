@@ -23,7 +23,7 @@ npm run dev -- --open
 
 ## Building
 
-This repo is set up in Vercel to auto-deploy from main to production. 
+This repo is set up in Vercel to auto-deploy from main to production.
 
 To manually build you can
 
