@@ -6,7 +6,7 @@
 	export let data: {
 		heading?: string;
 		text: string;
-		image: { src: string; alt: string };
+		image?: { src: string; alt: string };
 		imagePosition?: 'left' | 'right';
 	};
 
@@ -31,7 +31,12 @@
 	});
 </script>
 
-<div class="text-image-block" class:reverse={imagePosition === 'left'} bind:this={container}>
+<div
+	class="text-image-block"
+	class:reverse={imagePosition === 'left'}
+	class:text-only={!data.image}
+	bind:this={container}
+>
 	<div class="text-content">
 		{#if data.heading}
 			<h2>{data.heading}</h2>
@@ -41,9 +46,11 @@
 			{@html data.text}
 		</div>
 	</div>
-	<div class="image-content">
-		<img src={data.image.src} alt={data.image.alt} />
-	</div>
+	{#if data.image}
+		<div class="image-content">
+			<img src={data.image.src} alt={data.image.alt} />
+		</div>
+	{/if}
 </div>
 
 <style>
@@ -57,18 +64,17 @@
 		padding: 0 1rem;
 	}
 
+	.text-image-block.text-only {
+		grid-template-columns: 1fr;
+		max-width: 800px;
+	}
+
 	.text-image-block.reverse {
 		direction: rtl;
 	}
 
 	.text-image-block.reverse > * {
 		direction: ltr;
-	}
-
-	.text-content h2 {
-		font-size: 1.5em;
-		margin-bottom: 1rem;
-		line-height: 1.3;
 	}
 
 	.text-content .text {

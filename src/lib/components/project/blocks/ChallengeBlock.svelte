@@ -88,12 +88,8 @@
 	.challenge-section,
 	.solution-section {
 		flex: 1;
-		background: white;
-		border: var(--border);
-		border-bottom: 4px solid var(--gray);
-		border-radius: 10px;
-		padding: 2.5rem;
-		box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+		background: var(--gray-glass);
+		padding: 2rem;
 	}
 
 	.section-label {
@@ -140,11 +136,6 @@
 		.challenge-block.side-by-side {
 			flex-direction: column;
 			gap: 3rem;
-		}
-
-		.challenge-section,
-		.solution-section {
-			padding: 2rem;
 		}
 
 		h3 {

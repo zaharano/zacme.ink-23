@@ -13,7 +13,7 @@
 	export let secondButton: { txt: string; href: string } | undefined = undefined;
 	export let index = 0;
 
-	const primaryButton = hasOnsitePage ? { txt: 'view work', href: `/projects/${slug}` } : button;
+	const primaryButton = hasOnsitePage ? { txt: 'view work', href: `/work/${slug}` } : button;
 
 	let imgLoaded = false;
 </script>

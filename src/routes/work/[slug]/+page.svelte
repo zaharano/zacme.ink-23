@@ -3,11 +3,10 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import ContentBlock from '$lib/components/project/ContentBlock.svelte';
-	import ProjectHero from '$lib/components/project/ProjectHero.svelte';
 	import BackButton from '$lib/components/project/BackButton.svelte';
 
 	export let data;
-	const { project } = data;
+	const { client } = data;
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
@@ -20,26 +19,31 @@
 </script>
 
 <svelte:head>
-	<title>{project.title} - Zach's Portfolio</title>
-	<meta name="description" content={project.subtitle} />
+	<title>{client.title} - Zach's Portfolio</title>
+	<meta name="description" content={client.subtitle} />
 </svelte:head>
 
-<div class="project-page">
+<div class="client-page">
 	<div class="back-button-container">
 		<BackButton />
 	</div>
 
-	<ProjectHero title={project.title} subtitle={project.subtitle} heroImage={project.heroImage} />
+	<header class="client-header">
+		<h1>{client.title}</h1>
+		{#if client.subtitle}
+			<p class="subtitle">{client.subtitle}</p>
+		{/if}
+	</header>
 
 	<div class="content">
-		{#each project.blocks as block}
+		{#each client.blocks as block}
 			<ContentBlock {block} />
 		{/each}
 	</div>
 </div>
 
 <style>
-	.project-page {
+	.client-page {
 		min-height: 100vh;
 		max-width: 1400px;
 		margin: 0 auto;
@@ -50,14 +54,33 @@
 		padding-top: 2rem;
 	}
 
+	.client-header {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+
+	.client-header h1 {
+		margin-bottom: 0.5rem;
+	}
+
+	.client-header .subtitle {
+		font-size: 1.2em;
+		opacity: 0.8;
+		line-height: 1.5;
+	}
+
 	.content {
-		margin-top: 2rem;
 		margin-bottom: 4rem;
 	}
 
 	@media (max-width: 768px) {
 		.back-button-container {
 			padding-top: 1.5rem;
+		}
+
+		.client-header {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
 		}
 	}
 </style>

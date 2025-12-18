@@ -20,8 +20,8 @@
 	// If this project has an on-site page, override the primary button
 	const primaryButton = hasOnsitePage
 		? {
-				txt: 'view project',
-				href: `/projects/${slug}`
+				txt: 'view work',
+				href: `/work/${slug}`
 			}
 		: button;
 

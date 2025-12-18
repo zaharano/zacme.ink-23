@@ -20,7 +20,7 @@ export const clients = [
 		}
 	},
 	{
-		slug: 'racsite',
+		slug: 'rac',
 		hasOnsitePage: true,
 		src: './assets/' + 'gal-RACsite.png',
 		alt: 'A thumbnail of the Rent-A-Christmas website',
@@ -38,7 +38,7 @@ export const clients = [
 		}
 	},
 	{
-		slug: 'pexdigital',
+		slug: 'pex',
 		hasOnsitePage: true,
 		src: './assets/' + 'gal-PEXOnboarding.png',
 		alt: 'A thumbnail showing the stepper component of PEX onboarding',

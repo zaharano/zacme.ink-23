@@ -9,6 +9,7 @@
 	import OutcomesBlock from './blocks/OutcomesBlock.svelte';
 	import ChallengeBlock from './blocks/ChallengeBlock.svelte';
 	import ProcessBlock from './blocks/ProcessBlock.svelte';
+	import DeliverablesBlock from './blocks/DeliverablesBlock.svelte';
 
 	export let block: {
 		type: string;
@@ -35,6 +36,8 @@
 	<ChallengeBlock data={block.data} />
 {:else if block.type === 'process'}
 	<ProcessBlock data={block.data} />
+{:else if block.type === 'deliverables'}
+	<DeliverablesBlock data={block.data} />
 {:else if block.type === 'comingSoon'}
 	<ComingSoonBlock />
 {:else}

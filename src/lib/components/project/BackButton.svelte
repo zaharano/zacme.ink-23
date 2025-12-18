@@ -1,5 +1,5 @@
-<a href="/#projects" class="back-link">
-	← Back to projects
+<a href="/#clients" class="back-link">
+	← Back to work
 </a>
 
 <style>
