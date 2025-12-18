@@ -180,6 +180,10 @@ button {
 	background: var(--acct);
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 html,
 body {
 	position: relative;

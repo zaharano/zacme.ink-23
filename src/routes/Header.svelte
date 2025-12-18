@@ -3,9 +3,20 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+	import { page } from '$app/stores';
+
+	$: isHomepage = $page.url.pathname === '/';
+
+	function handleLogoClick(e) {
+		if (isHomepage) {
+			e.preventDefault();
+			gsap.to(window, { duration: 0.8, scrollTo: 0, ease: 'power2.out' });
+		}
+	}
 
 	onMount(() => {
-		gsap.registerPlugin(ScrollTrigger);
+		gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				scrub: true,
@@ -21,12 +32,7 @@
 
 <header>
 	<div class="header-container">
-		<button
-			aria-label="”Home”"
-			on:click={() => {
-				document.getElementById('main')?.scrollIntoView({ behavior: 'smooth' });
-			}}
-		>
+		<a href="/" aria-label="Home" on:click={handleLogoClick}>
 			<svg class="header-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111.75 143.68">
 				<g id="lines">
 					<path
@@ -69,7 +75,7 @@
 					/>
 				</g>
 			</svg>
-		</button>
+		</a>
 		<Menu />
 		<div class="header-bg" />
 	</div>

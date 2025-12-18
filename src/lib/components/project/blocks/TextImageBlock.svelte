@@ -52,7 +52,7 @@
 		grid-template-columns: 1fr 1fr;
 		gap: 3rem;
 		align-items: center;
-		margin: 4rem auto;
+		margin: 6rem auto;
 		max-width: 1200px;
 		padding: 0 1rem;
 	}
@@ -66,14 +66,15 @@
 	}
 
 	.text-content h2 {
-		font-size: 2em;
+		font-size: 1.5em;
 		margin-bottom: 1rem;
-		line-height: 1.2;
+		line-height: 1.3;
 	}
 
 	.text-content .text {
 		line-height: 1.7;
 		opacity: 0.9;
+		text-align: left;
 	}
 
 	.text-content :global(p) {

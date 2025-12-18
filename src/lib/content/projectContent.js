@@ -7,14 +7,25 @@
 //   txt: "check it out", no caps
 //   href: "http://www.startrek.com"
 
-export default [
+export const clients = [
+	{
+		src: './assets/ph.svg',
+		alt: 'Tribeca Aesthetics Logo',
+		tags: ['branding', 'webdev', 'marketing'],
+		title: 'Tribeca Aesthetics',
+		body: 'A comprehensive branding and digital presence for a premier aesthetics clinic.',
+		button: {
+			txt: 'coming soon',
+			href: '#'
+		}
+	},
 	{
 		slug: 'racsite',
 		hasOnsitePage: true,
 		src: './assets/' + 'gal-RACsite.png',
 		alt: 'A thumbnail of the Rent-A-Christmas website',
 		tags: ['ts', 'react', 'webdev'],
-		title: 'A New Rent-A-Christmas Website',
+		title: 'Rent-A-Christmas',
 		body: 'A robust website with ecommerce, large product catalog, blog, and more',
 		button: {
 			txt: 'case study',
@@ -22,19 +33,8 @@ export default [
 		},
 		secondButton: {
 			icon: 'www',
-			text: 'visit the site',
+			txt: 'visit the site',
 			href: 'https://www.rent-a-christmas.com'
-		}
-	},
-	{
-		src: './assets/' + 'gal-Megacorp.png',
-		alt: 'A thumbnail of the Megacorp website',
-		tags: ['js', 'svelte', 'gamedesign'],
-		title: 'Megacorp',
-		body: 'A silly game about climbing the ladder at a megacorporation.',
-		button: {
-			txt: 'play the demo',
-			href: 'https://corpomega.vercel.app/'
 		}
 	},
 	{
@@ -43,106 +43,13 @@ export default [
 		src: './assets/' + 'gal-PEXOnboarding.png',
 		alt: 'A thumbnail showing the stepper component of PEX onboarding',
 		tags: ['emails', 'documentation', 'branding'],
-		title: 'PEX Onboarding',
-		body: 'An effort to improve the user experience of onboarding at PEX.',
+		title: 'PEX',
+		body: 'Improving the user experience of onboarding and platform usage at PEX.',
 		button: {
 			txt: 'welcome aboard',
 			href: 'https://www.behance.net/gallery/130217977/PEX-Onboarding'
 		}
 	},
-	{
-		src: './assets/' + 'gal-PEXatWork.png',
-		alt: 'A thumbnail of PEX@Work... at work',
-		tags: ['explainers', 'video', 'emails'],
-		title: 'PEX@Work',
-		body: 'A campaign at PEX to increase the use of advanced platform features.',
-		button: {
-			txt: 'read about it',
-			href: 'https://www.behance.net/gallery/130161665/PEXWork'
-		}
-	},
-	{
-		slug: 'pexvis',
-		hasOnsitePage: true,
-		src: './assets/' + 'gal-PEXSpaces.jpg',
-		alt: 'A thumbnail of my work designing PEX in the physical world',
-		tags: ['office', 'conventions'],
-		title: 'PEX Spaces',
-		body: 'Bringing the PEX brand to a larger scale',
-		button: {
-			txt: 'see more',
-			href: 'https://www.behance.net/gallery/130225307/PEX-in-the-Physical-World'
-		}
-	},
-	{
-		slug: 'racstyle',
-		hasOnsitePage: true,
-		src: './assets/' + 'gal-RACStyleGuide.png',
-		alt: 'A thumbnail of the RAC Style Guide',
-		tags: ['branding', 'illustration', 'joy'],
-		title: 'Rent-A-Christmas Style Guide',
-		body: 'Lots of original illustration work went into this fun and festive brand guide.',
-		button: {
-			txt: 'check it out',
-			href: 'https://www.behance.net/gallery/110753107/The-Rent-A-Christmas-Style-Guide'
-		}
-	},
-	{
-		src: './assets/gal-RACvalues.png',
-		alt: 'A thumbnail of the RAC illustrations',
-		tags: ['art direction', 'illustration'],
-		title: 'Rent-A-Christmas Illustrations',
-		body: 'A few collections of illustrations. Featuring lots of elves.',
-		button: {
-			txt: 'elves, you say?',
-			href: 'https://www.behance.net/gallery/109998313/Rent-A-Christmas-Website-Illustrations'
-		}
-	},
-
-	{
-		src: './assets/' + 'gal-PEXcard.png',
-		alt: 'A thumbnail of many PEX card design options',
-		tags: ['print', 'plastic', 'branding'],
-		title: 'Redesigning the PEX Card',
-		body: '3.370" x 2.125" to define a brand',
-		button: {
-			txt: 'so many cards',
-			href: 'https://www.behance.net/gallery/110978231/Redesigning-the-PEX-Card'
-		}
-	},
-	{
-		src: './assets/' + 'gal-PEXcompsMocks.png',
-		alt: 'A thumbnail example of PEXcard mockups',
-		tags: ['shops', '3d'],
-		title: 'PEX Mockups',
-		body: 'Mocking up and compositing a library of product shots',
-		button: {
-			txt: 'who needs photos',
-			href: 'https://www.behance.net/gallery/110980207/PEX-Card-Comps-and-Mockups'
-		}
-	},
-	// {
-	// 	src: './assets/' + 'gal-PEXvids.png',
-	// 	alt: 'A thumbnail from a PEX video explainer',
-	// 	tags: ['animation', 'video', 'explainer'],
-	// 	title: 'Making PEX more dynamic',
-	// 	body: 'Finding every way I can to bring motion to the brand',
-	// 	button: {
-	// 		txt: 'check it out',
-	// 		href: 'https://www.behance.net/gallery/110976955/Adding-dynamism-to-the-PEX-Brand'
-	// 	}
-	// },
-	// {
-	// 	src: './assets/' + 'gal-Ghosh.png',
-	// 	alt: 'A thumbnail of the Powering Prosperity website',
-	// 	tags: ['webdesign', 'webflow'],
-	// 	title: 'Powering Powering Prosperity',
-	// 	body: 'Building a website for a new book',
-	// 	button: {
-	// 		txt: 'check it out',
-	// 		href: 'https://www.behance.net/gallery/111400489/Tiger-Hill-Capital-Websites'
-	// 	}
-	// },
 	{
 		src: './assets/' + 'gal-Ghosh2.png',
 		alt: 'A thumbnail of the Tiger Hill Capital website',
@@ -160,22 +67,47 @@ export default [
 		src: './assets/gal-LSFmag.png',
 		alt: 'A thumbnail showing off LSF magazine pages',
 		tags: ['print', 'editorial design', 'data viz'],
-		title: 'LSF Magazine',
+		title: 'Life Science Foundation',
 		body: 'Telling the story of biotechnology in a quarterly print magazine.',
 		button: {
 			txt: "let's see",
 			href: 'https://www.behance.net/gallery/40207321/LSF-Magazine'
 		}
+	}
+];
+
+export const personalProjects = [
+	{
+		src: './assets/' + 'gal-Megacorp.png',
+		alt: 'A thumbnail of the Megacorp website',
+		tags: ['js', 'svelte', 'gamedesign'],
+		title: 'Corpo Adventure',
+		body: 'A silly game about climbing the ladder at a megacorporation.',
+		button: {
+			txt: 'play the demo',
+			href: 'https://corpomega.vercel.app/'
+		}
 	},
 	{
-		src: './assets/gal-LSFbook.png',
-		alt: 'A thumbnail showing off the Biotech Hall of Fame book',
-		tags: ['print', 'production', 'photo editing'],
-		title: 'Biotech Hall of Fame',
-		body: 'A 220-page coffee-table book created for the 25th Annual Biotech Meeting in Laguna Beach.',
+		src: './assets/ph.svg',
+		alt: 'Mirepoix App',
+		tags: ['react native', 'mobile', 'cooking'],
+		title: 'Mirepoix',
+		body: 'A culinary companion app for managing recipes and meal prep.',
 		button: {
-			txt: 'flip through it',
-			href: 'https://www.behance.net/gallery/40200805/Biotech-Hall-of-Fame'
+			txt: 'coming soon',
+			href: '#'
+		}
+	},
+	{
+		src: './assets/ph.svg',
+		alt: 'Stolen Antiquities App',
+		tags: ['game', 'mobile', 'mystery'],
+		title: 'Stolen Antiquities',
+		body: 'An interactive mystery game about recovering lost artifacts.',
+		button: {
+			txt: 'coming soon',
+			href: '#'
 		}
 	}
 ];

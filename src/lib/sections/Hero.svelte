@@ -66,8 +66,8 @@
 		});
 
 		speechTL
-			.from('#speech', {
-				opacity: 0,
+			.to('#speech', {
+				opacity: 1,
 				duration: 0.2
 			})
 			.from(
@@ -90,14 +90,18 @@
 				},
 				'<'
 			)
-			.from(
+			.fromTo(
 				'#hi',
 				{
 					opacity: 0,
-					duration: 0.5,
 					scale: 0.2,
-					ease: 'power4.out',
-					transformOrigin: '50%, 50%'
+					transformOrigin: '50% 50%'
+				},
+				{
+					opacity: 1,
+					scale: 1,
+					duration: 0.5,
+					ease: 'power4.out'
 				},
 				'-=2.6'
 			)
@@ -568,6 +572,22 @@
 	h1 {
 		font-family: inherit;
 		padding: 0 10px;
+	}
+
+	/* Initial states to prevent FOUC (Flash of Unstyled Content) 
+	   These match the GSAP 'from' states */
+	#text {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	#bitz,
+	.sparkle,
+	.moon,
+	#speech,
+	#hi,
+	#bang {
+		opacity: 0;
 	}
 
 	h1 span {

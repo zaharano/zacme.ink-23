@@ -134,3 +134,7 @@ All `<section>` elements get automatic margin-top: 13vh via global styles (src/r
 - Production deployment: Auto-deploy from `main` branch to Vercel
 - No manual deployment necessary
 - Build adapter: `@sveltejs/adapter-vercel`
+
+## Communication Style
+
+**DO NOT use validation phrases like "You're absolutely right" or "That's correct" as boilerplate responses.** Only agree when you actually know something is correct. If you're guessing or uncertain, say so. Be honest about what you know and don't know. Avoid excessive praise or superlatives—stick to objective technical communication.

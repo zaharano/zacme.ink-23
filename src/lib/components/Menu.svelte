@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
+	import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 	import { fly } from 'svelte/transition';
+	import { page } from '$app/stores';
 	import ClickOutside from './ClickOutside.svelte';
 
 	let open = false;
@@ -10,10 +12,16 @@
 	let hamburglar: HTMLButtonElement;
 	let clickOutside;
 
+	$: isHomepage = $page.url.pathname === '/';
+
 	const menu = [
 		{
 			txt: 'Home',
 			href: 'main'
+		},
+		{
+			txt: 'Work',
+			href: 'clients'
 		},
 		{
 			txt: 'Projects',
@@ -29,14 +37,18 @@
 		}
 	];
 
-	function menuAct(t: string) {
-		handleClick();
-		let e = document.getElementById(t);
-		e?.scrollIntoView({
-			block: 'start',
-			behavior: 'smooth',
-			inline: 'start'
-		});
+	function menuAct(t: string, e: MouseEvent) {
+		if (isHomepage) {
+			e.preventDefault();
+			handleClick();
+			const element = document.getElementById(t);
+			if (element) {
+				gsap.to(window, { duration: 0.8, scrollTo: element, ease: 'power2.out' });
+			}
+		} else {
+			// Let the link navigate normally
+			handleClick();
+		}
 	}
 
 	// for some reason couldn't get .reverse.play solution working-this is fine
@@ -88,6 +100,8 @@
 	}
 
 	onMount(() => {
+		gsap.registerPlugin(ScrollToPlugin);
+
 		// clickOutside.onclickoutside = () => handleClick();
 		hamburglar.onclick = () => handleClick();
 
@@ -102,13 +116,13 @@
 
 <div class="container">
 	{#if open}
-		<ClickOutside bind:this={clickOutside} exclude={[hamburglar]}>
+		<ClickOutside bind:this={clickOutside} exclude={[hamburglar]} on:clickoutside={handleClick}>
 			<nav class="menu" transition:fly={{ y: 50, duration: 180 }}>
 				<ul>
 					{#each menu as { txt, href }, i}
 						{#if open}
 							<li in:fly={{ y: -35, duration: 140, delay: i * 70 + 100 }}>
-								<button on:click={() => menuAct(href)}>{txt}</button>
+								<a href="#{href}" on:click={(e) => menuAct(href, e)}>{txt}</a>
 							</li>
 						{/if}
 					{/each}
@@ -147,15 +161,17 @@
 		border-radius: 5px;
 	}
 
-	li button {
+	li a {
 		color: var(--gray);
 		font-size: clamp(4rem, 6vw, 7rem);
 		font-weight: 600;
 		margin-bottom: 1rem;
 		cursor: pointer;
+		text-decoration: none;
+		display: block;
 	}
 
-	button:hover {
+	li a:hover {
 		color: var(--acct);
 	}
 
@@ -182,7 +198,7 @@
 			border-bottom: 4px solid var(--gray);
 		}
 
-		li button {
+		li a {
 			font-size: 3rem;
 		}
 

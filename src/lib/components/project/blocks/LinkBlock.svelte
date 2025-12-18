@@ -20,7 +20,7 @@
 
 <style>
 	.link-block {
-		margin: 4rem auto;
+		margin: 6rem auto;
 		max-width: 800px;
 		padding: 0 1rem;
 	}

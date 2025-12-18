@@ -6,6 +6,9 @@
 	import TextImageBlock from './blocks/TextImageBlock.svelte';
 	import FullBleedBlock from './blocks/FullBleedBlock.svelte';
 	import VideoBlock from './blocks/VideoBlock.svelte';
+	import OutcomesBlock from './blocks/OutcomesBlock.svelte';
+	import ChallengeBlock from './blocks/ChallengeBlock.svelte';
+	import ProcessBlock from './blocks/ProcessBlock.svelte';
 
 	export let block: {
 		type: string;
@@ -26,6 +29,12 @@
 	<FullBleedBlock data={block.data} />
 {:else if block.type === 'video'}
 	<VideoBlock data={block.data} />
+{:else if block.type === 'outcomes'}
+	<OutcomesBlock data={block.data} />
+{:else if block.type === 'challenge'}
+	<ChallengeBlock data={block.data} />
+{:else if block.type === 'process'}
+	<ProcessBlock data={block.data} />
 {:else if block.type === 'comingSoon'}
 	<ComingSoonBlock />
 {:else}

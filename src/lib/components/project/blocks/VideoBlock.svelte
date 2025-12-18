@@ -53,7 +53,7 @@
 
 <style>
 	.video-block {
-		margin: 3rem auto;
+		margin: 6rem auto;
 		max-width: 1200px;
 		padding: 0 1rem;
 	}
