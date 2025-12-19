@@ -2,19 +2,58 @@
 // Each page showcases all work done for a specific client
 
 export const clientDetails = {
+	tribeca: {
+		slug: 'tribeca',
+		title: 'Tribeca Aesthetics',
+		subtitle: 'Comprehensive branding and digital presence',
+		heroImage: './assets/ph.svg',
+		// Gallery card data
+		cardData: {
+			src: './assets/ph.svg',
+			alt: 'Tribeca Aesthetics Logo',
+			tags: ['branding', 'webdev', 'marketing'],
+			body: 'A comprehensive branding and digital presence for a premier center for regenerative aesthetics.',
+			button: {
+				txt: 'Read more',
+				href: '#'
+			}
+		},
+		blocks: [
+			{
+				type: 'stats',
+				data: {
+					domain: 'Medical Aesthetics',
+					year: '2024',
+					role: 'Designer & Developer',
+					skills: ['Brand Strategy', 'Web Design', 'Marketing']
+				}
+			},
+			{
+				type: 'comingSoon'
+			}
+		]
+	},
+
 	rac: {
 		slug: 'rac',
 		title: 'Rent-A-Christmas',
 		subtitle: 'Ecommerce platform and brand development',
 		heroImage: '/assets/gal-RACsite.png',
+		// Gallery card data
+		cardData: {
+			src: './assets/gal-RACsite.png',
+			alt: 'A thumbnail of the Rent-A-Christmas website',
+			tags: ['illustration', 'branding', 'webdev'],
+			body: 'A years-long partnership developing brand identity, a playful illustration library, and marketing collateral for this full-service Christmas decoration rental company. Capped off with a modern headless e-commerce website build that weaves the whimsical brand throughout a professional and modern rental experience.',
+		},
 		blocks: [
 			{
 				type: 'stats',
 				data: {
-					client: 'Rent-A-Christmas',
-					year: '2022-2023',
-					role: 'Full-stack Developer & Designer',
-					tools: ['TypeScript', 'React', 'Shopify', 'Illustrator']
+					domain: 'Consumer & Commercial Rentals',
+					year: '2020-2025',
+					role: 'Full-stack Developer & Brand Designer',
+					skills: ['Full-stack Development', 'Illustration', 'Brand Design', 'E-commerce']
 				}
 			},
 			{
@@ -29,14 +68,15 @@ export const clientDetails = {
 				data: {
 					heading: 'What I Built',
 					items: [
-						'Custom Shopify ecommerce platform with React components',
+						'Headless e-commerce website (Shopify + Sanity CMS)',	
 						'Product catalog system for 500+ holiday decoration items',
-						'Streamlined checkout and cart experience',
+						'Blog and sales funnel content system',
+						'Streamlined checkout and cart experience for rental business',
 						'Content management system for blog and seasonal updates',
-						'Brand style guide and illustration system',
-						'Custom iconography and graphic elements',
-						'Responsive mobile experience'
-					]
+						'Signature illustration style development',
+						'Brand style guide and illustration system and library',
+						'Custom iconography and graphic elements'		
+							],
 				}
 			},
 			{
@@ -53,7 +93,7 @@ export const clientDetails = {
 				type: 'link',
 				data: {
 					primary: {
-						text: 'Visit the Site',
+						text: 'Vis',
 						href: 'https://www.rent-a-christmas.com'
 					},
 					secondary: {
@@ -65,61 +105,30 @@ export const clientDetails = {
 		]
 	},
 
-	racstyle: {
-		slug: 'racstyle',
-		title: 'Rent-A-Christmas Style Guide',
-		subtitle: 'Festive illustration work and brand guidelines',
-		heroImage: '/assets/gal-RACStyleGuide.png',
-		blocks: [
-			{
-				type: 'stats',
-				data: {
-					client: 'Rent-A-Christmas',
-					year: '2022',
-					role: 'Designer & Illustrator',
-					tools: ['Illustrator', 'Photoshop']
-				}
-			},
-			{
-				type: 'comingSoon'
-			}
-		]
-	},
-
-	pexvis: {
-		slug: 'pexvis',
-		title: 'PEX Spaces',
-		subtitle: 'Bringing the PEX brand to physical spaces',
-		heroImage: '/assets/gal-PEXSpaces.jpg',
-		blocks: [
-			{
-				type: 'stats',
-				data: {
-					client: 'PEX',
-					year: '2021',
-					role: 'Designer',
-					tools: ['Illustrator', 'Photoshop']
-				}
-			},
-			{
-				type: 'comingSoon'
-			}
-		]
-	},
-
 	pex: {
 		slug: 'pex',
 		title: 'PEX',
 		subtitle: 'Digital product design and development',
 		heroImage: '/assets/gal-PEXOnboarding.png',
+		// Gallery card data
+		cardData: {
+			src: './assets/gal-PEXOnboarding.png',
+			alt: 'A thumbnail showing the stepper component of PEX onboarding',
+			tags: ['emails', 'documentation', 'branding'],
+			body: 'Improving the user experience of onboarding and platform usage at PEX.',
+			button: {
+				txt: 'welcome aboard',
+				href: 'https://www.behance.net/gallery/130217977/PEX-Onboarding'
+			}
+		},
 		blocks: [
 			{
 				type: 'stats',
 				data: {
-					client: 'PEX',
+					domain: 'B2B Fintech',
 					year: '2020-2021',
 					role: 'UX Designer & Developer',
-					tools: ['Figma', 'React', 'HTML/CSS', 'User Research']
+					skills: ['UX Design', 'Front-end Development', 'User Research', 'Design Systems']
 				}
 			},
 			{
@@ -171,14 +180,25 @@ export const clientDetails = {
 		title: 'Life Science Foundation',
 		subtitle: 'Editorial design and data visualization',
 		heroImage: '/assets/gal-LSFmag.png',
+		// Gallery card data
+		cardData: {
+			src: './assets/gal-LSFmag.png',
+			alt: 'A thumbnail showing off LSF magazine pages',
+			tags: ['print', 'editorial design', 'data viz'],
+			body: 'Telling the story of biotechnology in a quarterly print magazine.',
+			button: {
+				txt: "let's see",
+				href: 'https://www.behance.net/gallery/40207321/LSF-Magazine'
+			}
+		},
 		blocks: [
 			{
 				type: 'stats',
 				data: {
-					client: 'Life Science Foundation',
+					domain: 'Science Communication',
 					year: '2016-2018',
 					role: 'Designer & Production Lead',
-					tools: ['InDesign', 'Illustrator', 'Photoshop']
+					skills: ['Editorial Design', 'Data Visualization', 'Illustration', 'Print Production']
 				}
 			},
 			{
@@ -224,3 +244,13 @@ export const clientDetails = {
 		]
 	}
 };
+
+// Export arrays for use in gallery components
+export const clients = Object.values(clientDetails)
+	.filter((client) => client.cardData) // Only include clients with card data
+	.map((client) => ({
+		...client.cardData,
+		slug: client.slug,
+		title: client.title,
+		hasOnsitePage: true
+	}));

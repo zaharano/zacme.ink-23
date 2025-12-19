@@ -160,19 +160,12 @@
 	<div id="ability-whole">
 		<ul class="sc" id="ability-feed">
 			<!-- double element so margin is included in the 100% move action as the items drop -->
-			<li><span>data visualization</span></li>
-			<li><span>graphql/rest</span></li>
-			<li><span>headless cms/schema</span></li>
-			<li><span>unity</span></li>
-			<li><span>motion graphics</span></li>
-			<li><span>video</span></li>
-			<li><span>git/cli tools</span></li>
-			<li><span>react/next/remix</span></li>
-			<li><span>svelte</span></li>
-			<li><span>gsap/d3</span></li>
+			<li><span>ai powered app</span></li>
+			<li><span>data modeling</span></li>
+			<li><span>python/rust</span></li>
+			<li><span>react/next/svelte</span></li>
+			<li><span>animation/gsap</span></li>
 			<li><span>svg/canvas</span></li>
-			<li><span>html/css/js/ts</span></li>
-			<li><span>c/rust/python</span></li>
 			<li><span>ui design</span></li>
 			<li><span>ux research</span></li>
 			<li><span>illustration</span></li>

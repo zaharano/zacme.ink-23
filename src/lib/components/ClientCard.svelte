@@ -10,7 +10,6 @@
 	export let button = { txt: '', href: '' };
 	export let slug = '';
 	export let hasOnsitePage = false;
-	export let secondButton: { txt: string; href: string } | undefined = undefined;
 	export let index = 0;
 
 	const primaryButton = hasOnsitePage ? { txt: 'view work', href: `/work/${slug}` } : button;
@@ -44,9 +43,6 @@
 			<p>{body}</p>
 			<div class="actions">
 				<Button {...primaryButton} />
-				{#if secondButton}
-					<Button {...secondButton} />
-				{/if}
 			</div>
 		</div>
 	</div>
@@ -133,8 +129,7 @@
 
 	.actions {
 		display: flex;
-		flex-wrap: wrap;
-		gap: 1rem;
+		justify-content: center;
 		margin-top: auto;
 	}
 

@@ -2,7 +2,8 @@
 	import ClientCard from '../components/ClientCard.svelte';
 	import ProjectCard from '../components/ProjectCard.svelte';
 	import SectionHead from '../components/SectionHead.svelte';
-	import { clients, personalProjects } from '../content/projectContent.js';
+	import { clients } from '../content/clientDetails.js';
+	import { personalProjects } from '../content/projectContent.js';
 </script>
 
 <section>

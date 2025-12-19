@@ -4,10 +4,10 @@
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 	export let data: {
-		client?: string;
+		domain?: string;
 		year?: string;
 		role?: string;
-		tools?: string[];
+		skills?: string[];
 	};
 
 	let container: HTMLElement;
@@ -32,10 +32,10 @@
 </script>
 
 <div class="stats-block" bind:this={container}>
-	{#if data.client}
+	{#if data.domain}
 		<div class="stat-card">
-			<div class="stat-label">Client</div>
-			<div class="stat-value">{data.client}</div>
+			<div class="stat-label">Domain</div>
+			<div class="stat-value">{data.domain}</div>
 		</div>
 	{/if}
 
@@ -53,10 +53,10 @@
 		</div>
 	{/if}
 
-	{#if data.tools}
+	{#if data.skills}
 		<div class="stat-card">
-			<div class="stat-label">Tools</div>
-			<div class="stat-value">{data.tools.join(', ')}</div>
+			<div class="stat-label">Skills</div>
+			<div class="stat-value">{data.skills.join(', ')}</div>
 		</div>
 	{/if}
 </div>

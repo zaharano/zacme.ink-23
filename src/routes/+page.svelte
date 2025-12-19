@@ -1,9 +1,16 @@
 <script>
+	import { page } from '$app/stores';
 	import Hero from '../lib/sections/Hero.svelte';
 	import FigSection from '../lib/sections/FigSection.svelte';
 	import ProjectSection from '../lib/sections/ProjectSection.svelte';
 	import AboutSection from '../lib/sections/AboutSection.svelte';
 	import ContactSection from '../lib/sections/ContactSection.svelte';
+
+	// Use navigation state to force Hero remount
+	let heroKey = 0;
+	$: if ($page.url.pathname === '/') {
+		heroKey++;
+	}
 </script>
 
 <svelte:head>
@@ -17,7 +24,9 @@
 </svelte:head>
 
 <main id="main">
-	<Hero />
+	{#key heroKey}
+		<Hero />
+	{/key}
 	<FigSection />
 	<ProjectSection />
 	<AboutSection />

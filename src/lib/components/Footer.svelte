@@ -205,7 +205,8 @@
 		<h3 class="sc">more of my work</h3>
 		<ul>
 			<li><a href="https://www.behance.net/zernesque">Behance</a></li>
-			<li><a href="https://dribbble.com/zernity">Dribbble</a></li>
+			
+			
 			<li><a href="https://github.com/zaharano">Github</a></li>
 		</ul>
 	</div>
